@@ -1,0 +1,184 @@
+#mode {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #111111;
+  cursor: pointer;
+  font-size: 1.5rem;
+  /* 1 rem=16px */
+}
+
+.dark-mode {
+  /* background-image: linear-gradient(#6a6a6a3f 1px, transparent 2px), linear-gradient(90deg, #6a6a6a47 1px, rgba(4, 4, 6, .293) 2px);
+    background-size: 30px 30px; */
+  --dot-bg: black;
+  --dot-color: white;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background: linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+  color: aliceblue;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(5, 4, 4);
+}
+
+#header > #details > h2 {
+  margin-bottom: 0;
+}
+
+#content {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#dp {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  display: block;
+  user-select: none;
+  padding: 10px;
+  border: 6px solid rgb(111, 213, 234);
+  background: black;
+}
+
+#link-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#link-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 1.5rem;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  user-select: none;
+  background-color: aliceblue;
+  border-radius: 50%;
+  border: 4px solid black;
+  box-shadow: 0px 4px 0 #111111;
+}
+
+.icon a {
+  font-size: 24px;
+  transition: transform 0.3s ease, text-transform 0.3s ease;
+}
+
+.icon a:hover {
+  transform: scale(1.2);
+}
+
+.link-box {
+  position: relative;
+  display: flex;
+  width: 80vw;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 1em;
+  font-weight: 600;
+  padding: 1em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 4px solid #111111;
+  box-shadow: 0px 8px 0 #111111;
+  font-size: medium;
+}
+.link-box > i {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+}
+
+.link-box > i {
+  font-size: 1.5rem;
+}
+
+#share-copy {
+  outline: none;
+  background-color: transparent;
+  border: transparent;
+  font-size: larger;
+  font-family: "Space Grotesk", "Roboto", sans-serif;
+  cursor: pointer;
+}
+/* CSS is used to style the portion of text that a user has highlighted or selected on a webpage */
+::selection {
+  background: rgb(79, 11, 40);
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .link-box:active {
+    transition: linear 200ms;
+    background-color: rgb(238, 243, 251);
+    transform: translateY(4px);
+    box-shadow: 0px 5px 0 #111111;
+  }
+}
+
+@media (min-width: 992px) {
+  .link-box:hover {
+    transition: linear 200ms;
+    background-color: rgb(238, 243, 251);
+    transform: translateY(4px);
+    box-shadow: 0px 5px 0 #111111;
+  }
+
+  #about {
+    width: 50vw;
+  }
+  .link-box {
+    width: 50vw;
+  }
+}
